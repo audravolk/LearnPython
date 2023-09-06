@@ -7,7 +7,7 @@ This assessment will gauge how well you understand the basics of **Python**. It
 
 2. [Data Structures](data-structures.md)
 
-3. [Built-In Functions](builtin-functions.md)
+3. [Built-In Functions](built-in-functions.md)
 
 4. [Control Flow Logic](control-flow-logic.md)
 

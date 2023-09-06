@@ -6,14 +6,14 @@
 
 Convert a float to an integer using `int()`. 
 For example:
-```Python
+```python
 int(5.33335)
 ```
 Returns `5`.
 
 Convert a string to an integer using `int()`.
 For example:
-```Python
+```python
 int("string")
 ```
 Returns an error, because a string cannot be converted to an integer. However, if the string represents a valid integer,, it will return the integer within the string. For example, `int("5")` will return `5`. 
@@ -24,7 +24,7 @@ Returns an error, because a string cannot be converted to an integer. However, i
 
 The term "arbitrary size" in regards to integers in Python refers to the fact that numbers produced by Python (of almost any size) will be dynamically stored, only limited by the working memory of the computer. This allows the user to specify a wide range of numeric values without having to specify the exact number (as opposed to some other coding languages with fixed-size integers).
 For example:
-```Python
+```python
 large_integer = 2 ** 1000
 ```
 Says 2 to the power of 1000, which normally will produce an integer with thousands of decimal places in some other coding languages, but Python will handle it without issues.
@@ -44,7 +44,7 @@ Says 2 to the power of 1000, which normally will produce an integer with thousan
 
 Convert a floating-point number to a specific number using  `round(number, decimal places)`.
 For example:
-```Python
+```python
 number = 3.14159265
 rounded_number = round(number, 2)
 print(rounded_number)
@@ -63,14 +63,14 @@ In Python, `0.1 + 0.2 != 0.3` (0.1 + 0.2 is not equal to 0.3), and rather return
 
 Convert a string to a float using `float()`.  The float will only convert a string to a float where the string contains a valid number.
 For example:
-```Python
+```python
 float("3")
 ```
 Returns `3.0`.
 
 Convert an integer to a float using `float()`.
 For example :
-```Python
+```python
 float(1)
 ```
 Returns `1.0`.
@@ -83,7 +83,7 @@ Returns `1.0`.
 
 A complex number contains a real part plus an imaginary part (for example "2 + 4i"). Imaginary parts are shown by multiplying a number by the variable "i" (i = sqrt(-1)). Imaginary parts are represented in Python by attaching `j` or `J` to the imaginary number.
 For example, 4i is represented in Python as `4j`.
-```Python
+```python
 real_number = 2
 imaginary_number = 4j
 complex_number = real_number + imaginary_number
@@ -93,7 +93,7 @@ Returns `2+4j`.
 
 Python has a constructor to represent complex numbers. Use `complex()` where `()` specifies first the real number, and second the complex number.
 For example:
-```Python
+```python
 z1 = complex(2.0,4.0)
 print(z1)
 ```
@@ -105,7 +105,7 @@ Returns `2 + 4j`.
 
 Us the attributes `.real` and `.imag` following the variable you have defined as a complex number to access the real and imaginary parts.
 For example:
-```Python
+```python
 z1 = 2 + 4j
 real_part = z1.real
 imaginary_part = z1.imaginary
@@ -123,7 +123,7 @@ You can also perform basic operations between complex numbers using `+`, ``-``, 
 
 Simply add two strings together to concatenate them.
 For example:
-```Python
+```python
 string1 = "Hello, "
 string2 = "world!"
 concatenated_string = string1 + string2
@@ -137,7 +137,7 @@ Returns `Hello, world!`
 
 f-strings are useful for embedding variables, they are represented like `f"()"`. Use curly braces `{}` around variables within the f-string.
 For example?
-```Python
+```python
 var_string1 = "Hello, "
 var_string2 = "world!"
 concatenated_f_string = f"{var_string1}{var_string2}"
@@ -153,14 +153,14 @@ Slice a string by specifying what position to slice the string at. Slicing means
 
 Slice to extract a substring. Omitting the start index implies starting from the beginning.
 For example, while including start index:
-```Python
+```python
 text = "Hello, world!"
 substring = text[0:5]
 print(substring)
 ```
 Returns `Hello`.
 Likewise, while omitting start index:
-```Python
+```python
 text = "Hello, world!"
 substring = text[:5]
 print(substring)
@@ -169,7 +169,7 @@ Also returns `Hello`.
 
 Omitting the stop index implicitly goes to the end.
 For example:
-```Python
+```python
 text = "Hello, world!"
 substring = text[7:]
 print(substring)
@@ -178,7 +178,7 @@ Returns `world!`.
 
 Negative indices count backward from the end to specify splice.
 For example:
-```Python
+```python
 text = "Hello, world!"
 substring = text[-6:-1]
 print(substring)
@@ -187,7 +187,7 @@ Returns `world`.
 
 Slice with a step value using the third entry.
 For example, if we want to start from the beginning, go to the end, and splice every 2nd character:
-```Python
+```python
 text = "Hello, world!"
 substring = text[::2]
 print(substring)
@@ -196,7 +196,7 @@ Returns: `Hlo ol!`.
 
 Reverse a string using `[::-1]`.
 For example:
-```Python
+```python
 text = "Hello, world!"
 substring = text[::-1]
 print(substring)
@@ -212,7 +212,7 @@ For a given string, these functions will search for a substring and return the i
 - `index()` returns `ValueError` if not found.
 
 Using `find()`:
-```Python
+```python
 text = "Hello, world!"
 index1 = text.find["world"]
 print(index1)
@@ -220,7 +220,7 @@ print(index1)
 Returns `7`.
 
 Using `index()`:
-```Python
+```python
 text = "Hello, world!"
 index2 = text.index["python"]
 print(index2)
@@ -238,7 +238,7 @@ Escape sequences area combination of characters that represent a special charact
 - `\'` and `\"` represent single and double quotes.
 - `\xhh` or `\xhhhh` represents a hexadecimal character using its ASCII code.
 For example:
-```Python
+```python
 heart_symbol = "\u2665"
 print(heart_symbol)
 ```
@@ -262,7 +262,7 @@ The following values are all considered falsy:
 	- Empty tuple `()` or `tuple()`
 
 For example:
-```Python
+```python
 def check_truthiness(value):
     if value:
         print(f"{value} is truthy")
@@ -285,7 +285,7 @@ Results say for all of these values `is falsy`.
 
 `==` is the Equality Operator. It's used to compare values to check if they are equal.
 For example, comparing the contents of "a" and "b" (not their identity):
-```Python
+```python
 a = [1, 2, 3]
 b = [1, 2, 3]
 
@@ -297,7 +297,7 @@ Results in `True`, because the lists have the same content.
 
 `is` is the Identity Operator. It's used to compare the identity or memory address of two variables to check if they refer to the same object.
 For example, to see if "a" and "b" are the same object:
-```Python
+```python
 a = [1, 2, 3]
 b = a 
 
@@ -313,7 +313,7 @@ Results in `True` because both variables refer to the same list object.
 
 `or` operator is used to combine 2+ Boolean expressions. It returns `True` if they are all the same.
 Example:
-```Python
+```python
 x = True
 y = False
 
@@ -323,7 +323,7 @@ Returns `False`.
 
 `and` operator is used to combine 2+ Boolean expressions. It returns `True` if they at least one of the expressions are `True` and `False` if all of the expressions are false.
 Example:
-```Python
+```python
 a = True
 b = False
 
@@ -333,7 +333,7 @@ Results `True`.
 
 `not` operator is used to negate a Boolean expression. It returns the opposite Boolean value.
 Example:
-```Python
+```python
 flag = True
 
 result = not flag
@@ -341,7 +341,7 @@ result = not flag
 Results `False`.
 
 Here are some combination examples:
-```Python
+```python
 age = 25
 has_license = True
 
@@ -349,7 +349,7 @@ if age >= 18 and has_license:
     print("You can drive!")
 ```
 
-```Python
+```python
 is_weekend = True
 is_holiday = False
 
@@ -357,7 +357,7 @@ if is_weekend or is_holiday:
     print("It's a good time to relax!")
 ```
 
-```Python
+```python
 has_permission = False
 
 if not has_permission:
@@ -372,7 +372,7 @@ Short-circuit evaluation is an optimization technique to improve `and` and `or` 
 
 In the context of Boolean, there may be side effects.
 For example, regarding the `and` operator:
-```Python
+```python
 x = False
 y = some_function()
 result = x and y
@@ -381,7 +381,7 @@ bool(result)
 Results `False` regardless of what `some_function`may be because the right operand `y` is not evaluated.
 
 For example, regarding the `or` operator:
-```Python
+```python
 x = False
 y = some_function()
 result = x or y
